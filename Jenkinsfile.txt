@@ -1,18 +1,14 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
     }
-    stages {
-        stage('Build') {
+            
+    stage('Git commit') {
             steps {
+                git credentialsid: 'sambasivarao1234@gmail.com ,
                 echo 'Building'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
+        
         }
         stage('Deploy') {
             steps {
