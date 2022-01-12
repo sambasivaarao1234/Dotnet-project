@@ -4,11 +4,16 @@ pipeline {
             
     stage('Git commit') {
             steps {
-                git credentialsid: 'sambasivarao1234@gmail.com ,
-                echo 'Building'
+                git credentialsid: 'C:\Programme\Java\jdk1.8.0_311''sambasivarao1234@gmail.com ,
+                
             }
         }
-        
+    stage {
+        stage('Build with MS build') {
+            steps {
+                echo 'Building'
+            }
+        }    
         }
         stage('Deploy') {
             steps {
